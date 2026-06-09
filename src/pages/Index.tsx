@@ -26,10 +26,14 @@ export default function Index() {
   const [sent, setSent] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = (e: React.FormEvent, via: "telegram" | "whatsapp") => {
     e.preventDefault();
     const text = `🚖 Новая заявка — Такси АМГ\n\n📍 Откуда: ${form.from}\n🏁 Куда: ${form.to}\n📅 Дата: ${form.date}\n👤 Имя: ${form.name}\n📞 Телефон: ${form.phone}`;
-    window.open(`https://t.me/DostavkaTaxi180?text=${encodeURIComponent(text)}`, "_blank");
+    if (via === "telegram") {
+      window.open(`https://t.me/DostavkaTaxi180?text=${encodeURIComponent(text)}`, "_blank");
+    } else {
+      window.open(`https://wa.me/79790630230?text=${encodeURIComponent(text)}`, "_blank");
+    }
     setSent(true);
   };
 
