@@ -26,14 +26,13 @@ export default function Index() {
   const [sent, setSent] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent, via: "telegram" | "whatsapp") => {
-    e.preventDefault();
+  const getTelegramLink = () => {
     const text = `🚖 Новая заявка — Такси АМГ\n\n📍 Откуда: ${form.from}\n🏁 Куда: ${form.to}\n📅 Дата: ${form.date}\n👤 Имя: ${form.name}\n📞 Телефон: ${form.phone}`;
-    if (via === "telegram") {
-      window.open(`https://t.me/DostavkaTaxi180?text=${encodeURIComponent(text)}`, "_blank");
-    } else {
-      window.open(`https://wa.me/79790630230?text=${encodeURIComponent(text)}`, "_blank");
-    }
+    return `https://t.me/DostavkaTaxi180?text=${encodeURIComponent(text)}`;
+  };
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
     setSent(true);
   };
 
@@ -258,11 +257,12 @@ export default function Index() {
                   </div>
                 </div>
 
-                <button type="button" onClick={(e) => handleSubmit(e, "telegram")}
-                  className="flex items-center gap-2 bg-orange-500 text-black font-display font-bold px-10 py-4 rounded-full hover:bg-orange-600 transition-all glow-orange text-lg">
+                <a href={getTelegramLink()} target="_blank" rel="noreferrer"
+                  onClick={handleSubmit as unknown as React.MouseEventHandler}
+                  className="inline-flex items-center gap-2 bg-orange-500 text-black font-display font-bold px-10 py-4 rounded-full hover:bg-orange-600 transition-all glow-orange text-lg cursor-pointer">
                   <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.562 8.248-1.97 9.289c-.145.658-.537.818-1.084.508l-3-2.21-1.447 1.394c-.16.16-.295.295-.605.295l.213-3.053 5.56-5.023c.242-.213-.054-.333-.373-.12L7.088 14.4l-2.95-.924c-.642-.204-.654-.642.136-.953l11.526-4.443c.537-.194 1.006.131.762.168z"/></svg>
                   Написать в Telegram
-                </button>
+                </a>
               </form>
             )}
           </div>
