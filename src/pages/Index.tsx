@@ -41,7 +41,7 @@ export default function Index() {
           <div className="w-9 h-9 rounded-full bg-orange-500 flex items-center justify-center glow-orange">
             <Icon name="Car" size={17} className="text-black" />
           </div>
-          <span className="font-display text-xl font-bold tracking-wide">РусТакси</span>
+          <span className="font-display text-xl font-bold tracking-wide">Такси АМГ</span>
         </div>
         <div className="hidden md:flex items-center gap-8 text-sm text-muted-foreground">
           <a href="#booking" className="hover:text-orange-500 transition-colors font-body">Забронировать</a>
@@ -394,7 +394,7 @@ export default function Index() {
               <div className="w-8 h-8 rounded-full bg-orange-500 flex items-center justify-center">
                 <Icon name="Car" size={16} className="text-black" />
               </div>
-              <span className="font-display text-xl font-bold">РусТакси</span>
+              <span className="font-display text-xl font-bold">Такси АМГ</span>
             </div>
             <div className="text-center text-muted-foreground text-sm font-body">
               Межгороднее такси по всей России и территориям СВО
@@ -405,7 +405,7 @@ export default function Index() {
             </div>
           </div>
           <div className="mt-6 pt-6 border-t border-border text-center text-xs text-muted-foreground font-body">
-            © 2024 РусТакси. Лицензированные пассажирские перевозки. Все права защищены.
+            © 2024 Такси АМГ. Лицензированные пассажирские перевозки. Все права защищены.
           </div>
         </div>
       </footer>
