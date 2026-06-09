@@ -48,10 +48,10 @@ export default function Index() {
           <a href="#regions" className="hover:text-orange-500 transition-colors font-body">Регионы</a>
           <a href="#about" className="hover:text-orange-500 transition-colors font-body">О компании</a>
         </div>
-        <a href="tel:+78001234567"
+        <a href="tel:+79790630230"
           className="hidden md:flex items-center gap-2 bg-orange-500 text-black font-display font-semibold px-5 py-2 rounded-full hover:bg-orange-600 transition-all glow-orange text-sm">
           <Icon name="Phone" size={15} />
-          8 800 123-45-67
+          +7 979 063-02-30
         </a>
         <button className="md:hidden text-foreground" onClick={() => setMobileOpen(!mobileOpen)}>
           <Icon name={mobileOpen ? "X" : "Menu"} size={24} />
@@ -64,8 +64,8 @@ export default function Index() {
           <a href="#booking" className="font-display text-3xl text-foreground hover:text-orange-500 transition-colors" onClick={() => setMobileOpen(false)}>Забронировать</a>
           <a href="#regions" className="font-display text-3xl text-foreground hover:text-orange-500 transition-colors" onClick={() => setMobileOpen(false)}>Регионы</a>
           <a href="#about" className="font-display text-3xl text-foreground hover:text-orange-500 transition-colors" onClick={() => setMobileOpen(false)}>О компании</a>
-          <a href="tel:+78001234567" className="font-display text-2xl text-orange-500 mt-4 flex items-center gap-2" onClick={() => setMobileOpen(false)}>
-            <Icon name="Phone" size={22} /> 8 800 123-45-67
+          <a href="tel:+79790630230" className="font-display text-2xl text-orange-500 mt-4 flex items-center gap-2" onClick={() => setMobileOpen(false)}>
+            <Icon name="Phone" size={22} /> +7 979 063-02-30
           </a>
         </div>
       )}
@@ -119,7 +119,7 @@ export default function Index() {
                 <Icon name="CalendarCheck" size={20} />
                 Забронировать поездку
               </a>
-              <a href="tel:+78001234567"
+              <a href="tel:+79790630230"
                 className="flex items-center gap-2 border border-orange-500/40 text-foreground font-display font-semibold px-8 py-4 rounded-full hover:border-orange-500 hover:text-orange-500 transition-all text-lg">
                 <Icon name="Phone" size={20} />
                 Позвонить
@@ -372,10 +372,10 @@ export default function Index() {
             Звоните прямо сейчас — оформим поездку за 5 минут
           </p>
           <div className="flex flex-wrap gap-4 justify-center">
-            <a href="tel:+78001234567"
+            <a href="tel:+79790630230"
               className="flex items-center gap-3 bg-orange-500 text-black font-display font-bold px-10 py-4 rounded-full hover:bg-orange-600 transition-all glow-orange text-xl">
               <Icon name="Phone" size={22} />
-              8 800 123-45-67
+              +7 979 063-02-30
             </a>
             <a href="#booking"
               className="flex items-center gap-3 border-2 border-orange-500/40 text-foreground font-display font-bold px-10 py-4 rounded-full hover:border-orange-500 transition-all text-xl">
@@ -401,7 +401,7 @@ export default function Index() {
             </div>
             <div className="flex items-center gap-2 text-muted-foreground text-sm font-body">
               <Icon name="Phone" size={16} className="text-orange-500" />
-              <a href="tel:+78001234567" className="hover:text-orange-500 transition-colors">8 800 123-45-67</a>
+              <a href="tel:+79790630230" className="hover:text-orange-500 transition-colors">+7 979 063-02-30</a>
             </div>
           </div>
           <div className="mt-6 pt-6 border-t border-border text-center text-xs text-muted-foreground font-body">
