@@ -54,11 +54,18 @@ export default function Index() {
           <a href="#regions" className="hover:text-orange-500 transition-colors font-body">Регионы</a>
           <a href="#about" className="hover:text-orange-500 transition-colors font-body">О компании</a>
         </div>
-        <a href="tel:+79790630230"
-          className="hidden md:flex items-center gap-2 bg-orange-500 text-black font-display font-semibold px-5 py-2 rounded-full hover:bg-orange-600 transition-all glow-orange text-sm">
-          <Icon name="Phone" size={15} />
-          +7 979 063-02-30
-        </a>
+        <div className="hidden md:flex items-center gap-3">
+          <a href="https://t.me/DostavkaTaxi180" target="_blank" rel="noreferrer"
+            className="flex items-center gap-2 border border-orange-500/40 text-orange-500 font-display font-semibold px-5 py-2 rounded-full hover:bg-orange-500/10 transition-all text-sm">
+            <svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.562 8.248-1.97 9.289c-.145.658-.537.818-1.084.508l-3-2.21-1.447 1.394c-.16.16-.295.295-.605.295l.213-3.053 5.56-5.023c.242-.213-.054-.333-.373-.12L7.088 14.4l-2.95-.924c-.642-.204-.654-.642.136-.953l11.526-4.443c.537-.194 1.006.131.762.168z"/></svg>
+            Telegram
+          </a>
+          <a href="tel:+79790630230"
+            className="flex items-center gap-2 bg-orange-500 text-black font-display font-semibold px-5 py-2 rounded-full hover:bg-orange-600 transition-all glow-orange text-sm">
+            <Icon name="Phone" size={15} />
+            +7 979 063-02-30
+          </a>
+        </div>
         <button className="md:hidden text-foreground" onClick={() => setMobileOpen(!mobileOpen)}>
           <Icon name={mobileOpen ? "X" : "Menu"} size={24} />
         </button>
@@ -70,8 +77,12 @@ export default function Index() {
           <a href="#booking" className="font-display text-3xl text-foreground hover:text-orange-500 transition-colors" onClick={() => setMobileOpen(false)}>Забронировать</a>
           <a href="#regions" className="font-display text-3xl text-foreground hover:text-orange-500 transition-colors" onClick={() => setMobileOpen(false)}>Регионы</a>
           <a href="#about" className="font-display text-3xl text-foreground hover:text-orange-500 transition-colors" onClick={() => setMobileOpen(false)}>О компании</a>
-          <a href="tel:+79790630230" className="font-display text-2xl text-orange-500 mt-4 flex items-center gap-2" onClick={() => setMobileOpen(false)}>
-            <Icon name="Phone" size={22} /> +7 979 063-02-30
+          <a href="https://t.me/DostavkaTaxi180" target="_blank" rel="noreferrer" className="font-display text-2xl text-orange-500 flex items-center gap-2" onClick={() => setMobileOpen(false)}>
+            <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.562 8.248-1.97 9.289c-.145.658-.537.818-1.084.508l-3-2.21-1.447 1.394c-.16.16-.295.295-.605.295l.213-3.053 5.56-5.023c.242-.213-.054-.333-.373-.12L7.088 14.4l-2.95-.924c-.642-.204-.654-.642.136-.953l11.526-4.443c.537-.194 1.006.131.762.168z"/></svg>
+            Telegram
+          </a>
+          <a href="tel:+79790630230" className="font-display text-2xl text-orange-500 flex items-center gap-2" onClick={() => setMobileOpen(false)}>
+            <Icon name="Phone" size={24} /> +7 979 063-02-30
           </a>
         </div>
       )}
