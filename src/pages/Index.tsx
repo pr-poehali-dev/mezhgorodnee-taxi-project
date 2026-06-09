@@ -28,6 +28,8 @@ export default function Index() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+    const text = `🚖 Новая заявка — Такси АМГ\n\n📍 Откуда: ${form.from}\n🏁 Куда: ${form.to}\n📅 Дата: ${form.date}\n👤 Имя: ${form.name}\n📞 Телефон: ${form.phone}`;
+    window.open(`https://t.me/DostavkaTaxi180?text=${encodeURIComponent(text)}`, "_blank");
     setSent(true);
   };
 
@@ -158,8 +160,13 @@ export default function Index() {
                 <div className="w-20 h-20 rounded-full bg-orange-500/10 border-2 border-orange-500 flex items-center justify-center mx-auto mb-6">
                   <Icon name="Check" size={36} className="text-orange-500" />
                 </div>
-                <h3 className="font-display text-3xl font-bold mb-3">Заявка принята!</h3>
-                <p className="text-muted-foreground font-body text-lg">Наш диспетчер свяжется с вами в ближайшие 5 минут</p>
+                <h3 className="font-display text-3xl font-bold mb-3">Telegram открыт!</h3>
+                <p className="text-muted-foreground font-body text-lg mb-6">Данные заявки уже вставлены в сообщение — просто нажмите «Отправить» в Telegram</p>
+                <a href="https://t.me/DostavkaTaxi180" target="_blank" rel="noreferrer"
+                  className="inline-flex items-center gap-2 bg-orange-500 text-black font-display font-bold px-8 py-3 rounded-full hover:bg-orange-600 transition-all glow-orange">
+                  <Icon name="ExternalLink" size={18} />
+                  Открыть @DostavkaTaxi180
+                </a>
               </div>
             ) : (
               <form onSubmit={handleSubmit} className="card-glass rounded-2xl p-8 md:p-10">
@@ -238,8 +245,8 @@ export default function Index() {
 
                 <button type="submit"
                   className="w-full md:w-auto flex items-center justify-center gap-3 bg-orange-500 text-black font-display font-bold px-10 py-4 rounded-full hover:bg-orange-600 transition-all glow-orange text-lg">
-                  <Icon name="Send" size={20} />
-                  Отправить заявку
+                  <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.562 8.248-1.97 9.289c-.145.658-.537.818-1.084.508l-3-2.21-1.447 1.394c-.16.16-.295.295-.605.295l.213-3.053 5.56-5.023c.242-.213-.054-.333-.373-.12L7.088 14.4l-2.95-.924c-.642-.204-.654-.642.136-.953l11.526-4.443c.537-.194 1.006.131.762.168z"/></svg>
+                  Написать в Telegram
                 </button>
               </form>
             )}
