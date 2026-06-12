@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Icon from "@/components/ui/icon";
 
 const HERO_IMAGE = "https://cdn.poehali.dev/projects/64fa1576-fc1d-4b18-b816-f770fc30ec25/files/a5b537aa-801c-43c7-bd24-a26f447f7925.jpg";
@@ -25,6 +25,18 @@ export default function Index() {
   const [form, setForm] = useState({ from: "", to: "", date: "", name: "", phone: "" });
   const [sent, setSent] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
+
+  useEffect(() => {
+    const w = window as Window & { yaContextCb?: Array<() => void>; Ya?: { Context?: { AdvManager?: { render: (opts: object) => void } } } };
+    if (w.yaContextCb) {
+      w.yaContextCb.push(() => {
+        w.Ya?.Context?.AdvManager?.render({
+          blockId: "R-A-19430821-1",
+          renderTo: "yandex_rtb_R-A-19430821-1",
+        });
+      });
+    }
+  }, []);
 
   const getTelegramLink = () => {
     const text = `🚖 Новая заявка — Такси АМГ\n\n📍 Откуда: ${form.from}\n🏁 Куда: ${form.to}\n📅 Дата: ${form.date}\n👤 Имя: ${form.name}\n📞 Телефон: ${form.phone}`;
@@ -286,6 +298,13 @@ export default function Index() {
               </div>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* YANDEX RTB */}
+      <section className="py-10 relative">
+        <div className="container mx-auto px-6 md:px-12 flex justify-center">
+          <div id="yandex_rtb_R-A-19430821-1" />
         </div>
       </section>
 
