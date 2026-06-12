@@ -114,7 +114,7 @@ export default function Index() {
               <div className="relative w-2 h-2">
                 <div className="w-2 h-2 rounded-full bg-orange-500 pulse-dot" />
               </div>
-              <span className="text-orange-500 text-sm font-body font-medium">Работаем по всем регионам СВО</span>
+              <span className="text-orange-500 text-sm font-body font-medium">Базируемся в Донецке · Работаем по всем регионам СВО</span>
             </div>
 
             <h1 className="font-display text-5xl md:text-7xl font-bold leading-tight mb-6 animate-fade-up delay-100"
