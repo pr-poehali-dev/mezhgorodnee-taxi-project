@@ -191,7 +191,7 @@ export default function Index() {
                 <a href="https://t.me/taxi_dlnrRF" target="_blank" rel="noreferrer"
                   className="inline-flex items-center gap-2 bg-orange-500 text-black font-display font-bold px-8 py-3 rounded-full hover:bg-orange-600 transition-all glow-orange">
                   <Icon name="ExternalLink" size={18} />
-                  Открыть @DostavkaTaxi180
+                  Открыть @taxi_dlnrRF
                 </a>
               </div>
             ) : (
