@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import Icon from "@/components/ui/icon";
 
 const HERO_IMAGE = "https://cdn.poehali.dev/projects/64fa1576-fc1d-4b18-b816-f770fc30ec25/files/a5b537aa-801c-43c7-bd24-a26f447f7925.jpg";
+const MAX_LINK = "https://max.ru/u/f9LHodD0cOKpghivtQ5dyOlm9ZYJskHuDNem31LvdCzcbi04Do30bYHDgbk";
 
 const REGIONS = [
   { name: "Москва", icon: "Building2", desc: "Столица и область" },
@@ -71,6 +72,11 @@ export default function Index() {
             <svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.562 8.248-1.97 9.289c-.145.658-.537.818-1.084.508l-3-2.21-1.447 1.394c-.16.16-.295.295-.605.295l.213-3.053 5.56-5.023c.242-.213-.054-.333-.373-.12L7.088 14.4l-2.95-.924c-.642-.204-.654-.642.136-.953l11.526-4.443c.537-.194 1.006.131.762.168z"/></svg>
             Telegram
           </a>
+          <a href={MAX_LINK} target="_blank" rel="noreferrer"
+            className="flex items-center gap-2 border border-orange-500/40 text-orange-500 font-display font-semibold px-5 py-2 rounded-full hover:bg-orange-500/10 transition-all text-sm">
+            <Icon name="MessageCircle" size={15} />
+            MAX
+          </a>
           <a href="tel:+79790630230"
             className="flex items-center gap-2 bg-orange-500 text-black font-display font-semibold px-5 py-2 rounded-full hover:bg-orange-600 transition-all glow-orange text-sm">
             <Icon name="Phone" size={15} />
@@ -91,6 +97,10 @@ export default function Index() {
           <a href="https://t.me/taxi_dlnrRF" target="_blank" rel="noreferrer" className="font-display text-2xl text-orange-500 flex items-center gap-2" onClick={() => setMobileOpen(false)}>
             <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.562 8.248-1.97 9.289c-.145.658-.537.818-1.084.508l-3-2.21-1.447 1.394c-.16.16-.295.295-.605.295l.213-3.053 5.56-5.023c.242-.213-.054-.333-.373-.12L7.088 14.4l-2.95-.924c-.642-.204-.654-.642.136-.953l11.526-4.443c.537-.194 1.006.131.762.168z"/></svg>
             Telegram
+          </a>
+          <a href={MAX_LINK} target="_blank" rel="noreferrer" className="font-display text-2xl text-orange-500 flex items-center gap-2" onClick={() => setMobileOpen(false)}>
+            <Icon name="MessageCircle" size={24} />
+            MAX
           </a>
           <a href="tel:+79790630230" className="font-display text-2xl text-orange-500 flex items-center gap-2" onClick={() => setMobileOpen(false)}>
             <Icon name="Phone" size={24} /> +7 979 063-02-30
