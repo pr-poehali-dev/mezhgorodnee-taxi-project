@@ -2,7 +2,7 @@ import { useState } from "react";
 import Icon from "@/components/ui/icon";
 
 const HERO_IMAGE = "https://cdn.poehali.dev/projects/64fa1576-fc1d-4b18-b816-f770fc30ec25/files/a5b537aa-801c-43c7-bd24-a26f447f7925.jpg";
-const MAX_LINK = "https://max.ru/u/f9LHodD0cOKpghivtQ5dyOlm9ZYJskHuDNem31LvdCzcbi04Do30bYHDgbk";
+const MAX_LINK = "https://max.ru/se13980577_biz";
 
 const REGIONS = [
   { name: "Москва", icon: "Building2", desc: "Столица и область" },
